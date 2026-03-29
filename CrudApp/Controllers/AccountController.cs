@@ -19,6 +19,8 @@ public class AccountController : Controller
     [HttpPost]
     public IActionResult Login(string username, string password)
     {
+        ViewBag.Mensaje = "Intento de inicio de sesión";
+
         var user = _context.Usuarios
             .FirstOrDefault(u => u.Username == username && u.Password == password);
 
