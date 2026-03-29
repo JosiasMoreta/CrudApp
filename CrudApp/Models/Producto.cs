@@ -6,9 +6,12 @@ namespace CrudApp.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El nombre es obligatorio")]
         public string Nombre { get; set; }
 
+        [Range(1, 10000, ErrorMessage = "Precio inválido")]
         public decimal Precio { get; set; }
+
+
     }
 }
