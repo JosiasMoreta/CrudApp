@@ -1,33 +1,22 @@
-﻿<div class="container">
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
 
-    <div class="card">
-        <h2>Productos</h2>
 
-        <a asp-action="Create" class="btn btn-success">Crear Producto</a>
+    <thead>
+        <tr>
+        </tr>
+    </thead>
 
-        <table style="width:100%; margin-top:20px;">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@item.Nombre</td>
-                        <td>@item.Precio</td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <tbody>
+        <tr>
+            <td>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
 
     </div>
 
