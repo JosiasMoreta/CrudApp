@@ -28,3 +28,10 @@ body {
 h1, h2 {
     color: #2c3e50;
 }
+
+a {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
