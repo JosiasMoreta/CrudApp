@@ -2,6 +2,7 @@
 
 namespace CrudApp.Models
 {
+ 
     public class AppDbContext : DbContext
     {
         public DbSet<Usuario> Usuarios { get; set; }
