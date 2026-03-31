@@ -1,13 +1,27 @@
-﻿<h2>Login del Sistema</h2>
-<p>Ingrese sus credenciales</p>
+﻿<h2>Login</h2>
 
-<form method="post">
-    <input type="text" name="username" placeholder="Usuario" required />
-    <input type="password" name="password" placeholder="Contraseña" required />
-    <button type="submit">Entrar</button>
-</form>
-“Hola mundo”
-@if (ViewBag.Error != null)
-{
-    <p style="color:red">@ViewBag.Error</p>
-}
+    <div class="card" style="max-width:400px; margin:auto;">
+        <h2>Iniciar Sesión</h2>
+
+        <form method="post">
+            <div>
+                <label>Usuario</label>
+                <input type="text" name="username" class="form-control" />
+            </div>
+
+            <div>
+                <label>Contraseña</label>
+                <input type="password" name="password" class="form-control" />
+            </div>
+
+            <br />
+
+            <button type="submit" class="btn btn-primary">
+                Entrar
+            </button>
+        </form>
+
+        <p style="color:red;">@ViewBag.Error</p>
+    </div>
+
+</div>
