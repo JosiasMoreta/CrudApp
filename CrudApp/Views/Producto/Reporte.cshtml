@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CrudApp.Models.Producto>
+
+@{
+    ViewData["Title"] = "Reporte de Productos";
+}
+
+<h2 class="mb-4">📊 Reporte de Productos</h2>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="alert alert-info">
+            <strong>Total de Productos:</strong> @ViewBag.TotalProductos
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <strong>Valor Total:</strong> RD$ @ViewBag.TotalValor
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@item.Nombre</td>
+                <td>RD$ @item.Precio</td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>

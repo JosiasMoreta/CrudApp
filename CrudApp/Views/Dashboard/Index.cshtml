@@ -1,28 +1,47 @@
-﻿
-<div style="text-align:center; margin-top:50px;">
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
 
-    <h1 style="color:#2c3e50;">Panel de Control</h1>
+<div class="container mt-5">
 
-    <p>Bienvenido al sistema de gestión</p>
-
-    <hr />
-
-    <h3>Opciones disponibles</h3>
-
-    <div style="margin-top:20px;">
-
-        <a href="/Producto/Index" style="margin:10px; padding:12px; background-color:blue; color:white; text-decoration:none;">
-            Gestionar Productos
-        </a>
-
-        <a href="#" style="margin:10px; padding:12px; background-color:green; color:white; text-decoration:none;">
-            Ver Reportes
-        </a>
-
+    <div class="text-center mb-5">
+        <h1 class="fw-bold"> Panel de Control</h1>
+        <p class="text-muted">Bienvenido al sistema de gestión</p>
     </div>
 
-    <p style="margin-top:30px; color:green;">
-        ESTO ES LO BUENO ✔
-    </p>
+    <div class="row text-center">
+
+      
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body">
+                    <h3 class="mb-3"> Productos</h3>
+                    <p class="text-muted">Gestiona tus productos fácilmente</p>
+                    <a href="/Producto/Index" class="btn btn-primary w-100">Gestionar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body">
+                    <h3 class="mb-3"> Reportes</h3>
+                    <p class="text-muted">Visualiza estadísticas del sistema</p>
+                    <a href="/Producto/Reporte" class="btn btn-success w-100">Ver Reporte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body">
+                    <h3 class="mb-3"> Usuarios</h3>
+                    <p class="text-muted">Administra los accesos</p>
+                    <a href="/Usuarios/Index" class="btn btn-dark w-100">Gestionar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </div>
