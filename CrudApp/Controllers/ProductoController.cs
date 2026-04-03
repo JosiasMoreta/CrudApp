@@ -41,6 +41,19 @@ namespace CrudApp.Controllers
 
             return View(producto);
         }
+        public IActionResult Reporte()
+        {
+            var productos = _context.Productos.ToList();
+
+            var totalProductos = productos.Count;
+            var totalValor = productos.Sum(p => p.Precio);
+
+            ViewBag.TotalProductos = totalProductos;
+            ViewBag.TotalValor = totalValor;
+
+            return View(productos);
+        }
+
 
         // GET: Producto/Create
         public IActionResult Create()

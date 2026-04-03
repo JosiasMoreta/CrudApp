@@ -19,17 +19,17 @@ public class AccountController : Controller
     [HttpPost]
     public IActionResult Login(string username, string password)
     {
-        ViewBag.Mensaje = "Intento de inicio de sesión";
-
         var user = _context.Usuarios
             .FirstOrDefault(u => u.Username == username && u.Password == password);
 
         if (user != null)
         {
+            HttpContext.Session.SetString("Usuario", user.Username);
+
             return RedirectToAction("Index", "Dashboard");
         }
 
-        ViewBag.Error = "Usuario incorrecto";
+        ViewBag.Error = "Usuario o contraseña incorrectos";
         return View();
     }
 }
