@@ -10,7 +10,7 @@ public class ProductTests : BaseTest
     public void Crear_Producto()
     {
         driver.Navigate().GoToUrl("http://localhost:5086/Producto/Create");
-
+        //para subirlo
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
         string nombre = "Prod_" + DateTime.Now.Ticks;
