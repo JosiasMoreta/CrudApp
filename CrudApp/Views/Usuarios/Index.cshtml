@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CrudApp.Models.Usuario>
+
+<h2>Usuarios</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Usuario</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Username</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
